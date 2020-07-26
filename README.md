@@ -6,7 +6,7 @@ A very simple wrapper to base64 encode strings.
 
 I use `envsubst` for injecting Kubernetes secrets when `kubectl apply`ing.
 
-The `base64` command adds a newline (on my Pop_OS! 20.04 machine, at least), which breaks secrets. This tool does not add a newline.
+`echo` adds a newline by default and I always forget the `-n` argument, which ends up breaking secrets. This tool does not add a newline.
 
 ## Usage
 
